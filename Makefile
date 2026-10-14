@@ -4,8 +4,6 @@ SRCS     = $(wildcard src/*.cpp)
 OBJS     = $(addprefix build/,$(notdir $(SRCS:.cpp=.o)))
 vpath %.cpp $(dir $(SRCS))
 
-#.PHONY: run clean
-
 main: $(OBJS)
 	$(CXX) $(OBJS) -o main -L$(SFML)/lib $(LIBS)
 
